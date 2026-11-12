@@ -26,12 +26,12 @@ logic  [10:0]horizontal_count;
 	vertical_count <= 0;
     end
     else if (pxlClk) begin
+        //έλεγχος σημάτων γραμμής
          if(horizontal_count == 1039)begin
         horizontal_count <= 0;
         hsync <= 1;
             if(vertical_count == 665)begin
             vertical_count <= 0;
-            hsync <= 1;
             end
             else vertical_count <= vertical_count + 1;
         end
@@ -43,10 +43,12 @@ logic  [10:0]horizontal_count;
                 hsync <= 1;
                 horizontal_count <= horizontal_count + 1;
             end
+            //έλεγχος σημάτων στήλης
         if(vertical_count >= 637 && vertical_count <= 642)
         vsync <=0;
         else 
         vsync <=1;
+        //έλεγχος χρωμάτων
         if(horizontal_count <= 399 && vertical_count <= 299)begin
             red <= 4'b1111;
             green <= 4'b0000;

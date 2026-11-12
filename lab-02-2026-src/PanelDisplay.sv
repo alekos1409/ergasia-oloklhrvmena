@@ -32,20 +32,20 @@ logic  [10:0]horizontal_count;
 			if(horizontal_count <= 399)begin
 		 	horizontal_count <= horizontal_count + 1;
 		 	hsync <= 1;
-			 red <= 1;
+			 red <= 4'b1111;
 			 green <= 0;
 			 blue <= 0;
 			end
 			else if(horizontal_count > 399 && horizontal_count <= 799)begin
 			 horizontal_count <= horizontal_count + 1;
 			 hsync <= 1;
-			 green <= 1;
+			 green <= 4'b1111;
 			 red <= 0;
 			 blue <= 0;
 			end
 			else if(horizontal_count > 799 && horizontal_count <=855)begin
 		 	horizontal_count <= horizontal_count + 1;
-			 hsync <= 1;
+			 hsync <= 4'b1111;
 			 green <= 0;
 			 red <= 0;
 			 blue <= 0;
@@ -75,16 +75,16 @@ logic  [10:0]horizontal_count;
 			if(horizontal_count <= 399)begin
 		 	horizontal_count <= horizontal_count + 1;
 		 	hsync <= 1;
-			 blue <= 1;
+			 blue <= 4'b1111;
 			 green <= 0;
 			red <= 0;
 			end
 			else if(horizontal_count > 399 && horizontal_count <= 799)begin
 			 horizontal_count <= horizontal_count + 1;
-			 hsync <= 1;
-			 green <= 1;
-			 red <= 1;
-			 blue <= 1;
+			 hsync <= 4'b1111;
+			 green <= 4'b1111;
+			 red <= 4'b1111;
+			 blue <= 4'b1111;
 			end
 			else if(horizontal_count > 799 && horizontal_count <=855)begin
 		 	horizontal_count <= horizontal_count + 1;
