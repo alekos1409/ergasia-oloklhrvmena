@@ -23,7 +23,7 @@ logic [3:0] vga_blue;
 
 
 // DUT INSTANTIATION
-PanelDisplay vga(.clk(clk), 
+PanelDisplay2 vga(.clk(clk), 
                  .rst(rst), 
 				 .hsync(vga_hsync), 
 				 .vsync(vga_vsync),

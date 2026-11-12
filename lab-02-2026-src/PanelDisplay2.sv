@@ -14,7 +14,7 @@ always_ff @(posedge clk) begin
  pxlClk <= ~pxlClk;
 end
 logic  [9:0]vertical_count;
-logic  [9:0]horizontal_count;
+logic  [10:0]horizontal_count;
  always_ff @(posedge clk) begin
     if (rst)begin
 	hsync <= 1;
